@@ -1,0 +1,17 @@
+
+// color
+$dark-blue: #00587A;
+$sky-blue: #008891;
+$darkish-blue: #0F3057;
+$gray: #E7E7DE;
+$yellow-gray: #CDCBA6;
+$white: #fff;
+
+// font
+$font-noto-sans:'Noto Sans', sans-serif;
+
+// function to convert px to rem
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}

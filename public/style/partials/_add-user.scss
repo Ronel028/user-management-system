@@ -1,0 +1,32 @@
+
+@import './variables';
+
+
+.add-new-user{
+
+    .back-to-home{
+        margin-left: 15%;
+        a{
+            color: $darkish-blue;
+        }
+    }
+
+    .add-user-form, .update-user-form{
+        max-width: 60%;
+        margin: 0 auto;
+    
+        form.insert-user, form.update-user{
+            button.btn{
+                background-color: $dark-blue;
+                color: $white;
+                border: none;
+                transition: all 0.2s ease-in-out;
+    
+                &:hover{
+                    background-color: $sky-blue;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,29 @@
+@import './variables';
+
+main{
+    margin-top: toRem(150);
+
+    a.new-user-btn{
+        background-color: $dark-blue;
+        color: $white;
+        padding: toRem(10) toRem(20);
+    }
+
+    table{
+        thead{
+            background-color: $dark-blue;
+            color: $white;
+        }
+        tbody{
+            tr{
+                td.action{
+                    display: flex;
+                    gap: toRem(20);
+                    a{
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+    }
+}

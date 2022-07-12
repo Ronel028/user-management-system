@@ -1,0 +1,11 @@
+@import './variables';
+
+header{
+    background-color: $darkish-blue;
+    nav{
+        h1{
+            font-size: toRem(30);
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+
+@import './partials/variables';
+@import './partials/navigation';
+@import './partials/main';
+@import './partials/add-user';
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $gray;
+    font-family: $font-noto-sans;
+}
+
+a{
+    text-decoration: none;
+}

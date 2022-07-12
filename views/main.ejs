@@ -1,0 +1,48 @@
+<!-- include header -->
+<%- include('./partials/header') %>
+<!-- end header -->
+
+        <a href="/adduser" class="new-user-btn rounded">
+            <i class="bi bi-person-plus-fill"></i> New user
+        </a>
+
+        <table class="table mt-5 table-striped table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                    <td>Ronel Florida</td>
+                    <td>ronel@gmail.com</td>
+                    <td>21</td>
+                    <td>Male</td>
+                    <td>Active</td>
+                    <td class="action">
+                        <a href="/updateuser" class="pencil"><i class="bi bi-pencil-fill"></i></a>
+                        <a href="#" class="delete text-danger"><i class="bi bi-trash-fill"></i></a>
+                    </td>
+            </tr>
+            <tr>
+                    <td>Ronel Florida</td>
+                    <td>ronel@gmail.com</td>
+                    <td>21</td>
+                    <td>Male</td>
+                    <td>Active</td>
+                    <td class="action">
+                        <a href="/updateuser" class="pencil"><i class="bi bi-pencil-fill"></i></a>
+                        <a href="#" class="delete text-danger"><i class="bi bi-trash-fill"></i></a>
+                    </td>
+            </tr>
+            </tbody>
+        </table>
+    
+<!-- include footer -->
+<%- include('./partials/footer') %>
+<!-- end footer -->
