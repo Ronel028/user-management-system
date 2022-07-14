@@ -18,28 +18,19 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                    <td>Ronel Florida</td>
-                    <td>ronel@gmail.com</td>
-                    <td>21</td>
-                    <td>Male</td>
-                    <td>Active</td>
-                    <td class="action">
-                        <a href="/updateuser" class="pencil"><i class="bi bi-pencil-fill"></i></a>
-                        <a href="#" class="delete text-danger"><i class="bi bi-trash-fill"></i></a>
-                    </td>
-            </tr>
-            <tr>
-                    <td>Ronel Florida</td>
-                    <td>ronel@gmail.com</td>
-                    <td>21</td>
-                    <td>Male</td>
-                    <td>Active</td>
-                    <td class="action">
-                        <a href="/updateuser" class="pencil"><i class="bi bi-pencil-fill"></i></a>
-                        <a href="#" class="delete text-danger"><i class="bi bi-trash-fill"></i></a>
-                    </td>
-            </tr>
+                <% data.forEach(user=>{ %>
+                <tr>
+                        <td><%= user.name %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.age %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.active %></td>
+                        <td class="action">
+                            <a href="/updateuser" class="pencil"><i class="bi bi-pencil-fill"></i></a>
+                            <a href="#" class="delete text-danger"><i class="bi bi-trash-fill"></i></a>
+                        </td>
+                </tr>
+                <%})%>
             </tbody>
         </table>
     
