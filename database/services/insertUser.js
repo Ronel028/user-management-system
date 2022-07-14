@@ -1,16 +1,21 @@
 
-const connectionDB = require('../connection');
+const connectionDB = require('../schema');
 
-function insertUser(name, email, age, gender, status, date){
+async function insertUser(name, email, age, gender, status, date){
 
     return new Promise((resolve, reject)=>{
-        const insertQuery = `INSERT INTO user_table (name, email, age, gender, status, date)
-                             VALUES (?, ?, ?, ?, ?, ?)`;
-        connectionDB.query(insertQuery, [name, email, age, gender, status, date], (error, result)=>{
+        connectionDB.create({
+            name: name, 
+            email: email,
+            age: age,
+            gender: gender,
+            status: status,
+            date: date
+        }, function(error, result){
             if(error){
                 reject(error)
             }else{
-                resolve(result);
+                resolve(result)
             }
         })
     })

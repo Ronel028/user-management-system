@@ -1,11 +1,11 @@
 
-const connectionDB = require('../connection');
+const connectionDB = require('../schema');
 
 function viewUser(){
 
     return new Promise((resolve, reject)=>{
-        const viewQuery = `SELECT * FROM user_table`;
-        connectionDB.query(viewQuery, (error, result)=>{
+
+        connectionDB.find({}, (error, result)=>{
             if(error){
                 reject(error)
             }else{

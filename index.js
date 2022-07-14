@@ -17,9 +17,19 @@ app.use(bodyParser.json())
 // template engine
 app.set('view engine', 'ejs')
 
-// database connection
-const connectionDB = require('./database/connection');
-connectionDB;
+// test mongoDB
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://shujihanma:ronelflorida028@cluster0.m2v6u.mongodb.net/?retryWrites=true&w=majority',{
+        useNewUrlParser: 'true',
+        useUnifiedTopology: 'true'
+    }, function(error){
+        if(error){
+            console.log("Error Connecting")
+        }else{
+           console.log('connected to mongoDB Atlas') 
+        }
+        
+    })
 
 // routes
 app.use('/', require('./routes/pageRoute'));
