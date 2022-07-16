@@ -14,19 +14,19 @@
 
     <div class="update-user-form">
 
-        <form action="" class="update-user">
+        <form id="update-user" class="update-user">
 
             <div class="mb-3">
                 <label for="name" class="form-label fw-bold">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Ronel Florida" value="<%= name %>">
+                <input type="text" class="form-control" id="update-name" placeholder="Ronel Florida" value="<%= name %>">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label fw-bold">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="example@gmail.com" value="<%= email %>">
+                <input type="email" class="form-control" id="update-email" placeholder="example@gmail.com" value="<%= email %>">
             </div>
             <div class="mb-3">
                 <label for="age" class="form-label fw-bold">Age</label>
-                <input type="age" class="form-control w-50" id="age" placeholder="Enter your age..." value="<%= age %>">
+                <input type="age" class="form-control w-50" id="update-age" placeholder="Enter your age..." value="<%= age %>">
             </div>
             
             <!-- gender -->
@@ -35,7 +35,7 @@
                 <div class="gender-select">
                         <div class="form-check-inline ml-4">
                             <label class="form-check-label" for="male">Male</label>
-                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" 
+                            <input class="form-check-input" type="radio" name="gender" id="update-male" value="Male" 
                             <%if(gender === 'Male'){%>
                                <%="checked"%>
                             <%}%>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-check-inline">
                             <label class="form-check-label" for="female">Female</label>
-                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female"
+                            <input class="form-check-input" type="radio" name="gender" id="update-female" value="Female"
                             <%if(gender === 'Female'){%>
                                 <%="checked"%>
                             <%}%>
@@ -59,7 +59,7 @@
                 <div class="gender-select">
                     <div class="form-check-inline ml-4">
                         <label class="form-check-label" for="active">Active</label>
-                        <input class="form-check-input" type="radio" name="status" id="active" value="Active"
+                        <input class="form-check-input" type="radio" name="status" id="update-active" value="Active"
                         <%if(status === 'Active'){%>
                             <%="checked"%>
                         <%}%>
@@ -68,7 +68,7 @@
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label" for="inactive">InActive</label>
-                        <input class="form-check-input" type="radio" name="status" id="inactive" value="InActive"
+                        <input class="form-check-input" type="radio" name="status" id="update-inactive" value="InActive"
                         <%if(status === 'InActive'){%>
                             <%="checked"%>
                         <%}%>
@@ -79,7 +79,7 @@
             </div>
            
             <!-- button -->
-            <button class="btn w-100" type="button">Save</button>
+            <button class="btn w-100" type="submit">Save</button>
 
         </form>
 

@@ -10,6 +10,10 @@
             <!-- server response appear here -->
         </div>
 
+        <!-- loading data -->
+        
+
+        <!-- loading for deleting data -->
         <button id="loading" class="btn btn-danger d-none" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Delete...
@@ -27,6 +31,15 @@
             </tr>
             </thead>
             <tbody>
+                <!-- loading appear while data is fetching -->
+                <tr id="loading-data" class="d-none">
+                    <td colspan="6">
+                        <div class="d-flex align-items-center">
+                            <strong>Loading user data...</strong>
+                            <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                        </div>
+                    </td>
+                </tr>
                 <!-- user data appear here -->
             </tbody>
         </table>

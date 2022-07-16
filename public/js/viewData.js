@@ -1,10 +1,13 @@
 
 
 // fecthing data from server
+const loadingData = document.getElementById('loading-data');
 async function userData(){
+    loadingData.classList.remove('d-none');
     const fetchUser = await fetch('/service/viewuserdata', { method: 'GET' });
     const user = await fetchUser.json();
     displayUserData(user);
+    loadingData.classList.add('d-none');
     
 }
 userData();

@@ -69,6 +69,12 @@ router.post('/updateuser', async function(req, res){
         const { name, email, age, gender, status} = req.body;
 
         await updateUser(id, name, email, age, gender, status)
+        // console.log(id);
+        // console.log(name);
+        // console.log(email);
+        // console.log(age);
+        // console.log(gender);
+        // console.log(status);
 
         res.json("Update Success")
         
