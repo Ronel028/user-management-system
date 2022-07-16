@@ -11,7 +11,10 @@ const deleteUser = require('../database/services/delete');
 router.get('/viewuserdata', async function(req, res){
     try {
         const user = await userData();
-        res.json(user)
+        console.log(user.length)
+        res.json(user) 
+        
+        
     } catch (error) {
         res.json({
             error: error,
@@ -49,11 +52,12 @@ router.delete('/deleteuser', async function(req, res){
         const userDel = await deleteUser(_id)
         console.log(userDel)
         res.json({
-            message: 'User remove success'
+            status: 'ok'
         })
     } catch (error) {
-        res.json(error)
-        console.log(error)
+        res.json({
+            status: 'Error'
+        })
     }
 })
 
