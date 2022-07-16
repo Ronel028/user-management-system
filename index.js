@@ -20,7 +20,7 @@ app.set('view engine', 'ejs')
 
 // test mongoDB
 const mongoose = require('mongoose');
-mongoose.connect(process.env.mongoURI,{
+mongoose.connect('mongodb+srv://shujihanma:ronelflorida028@cluster0.m2v6u.mongodb.net/?retryWrites=true&w=majority', {
         useNewUrlParser: 'true',
         useUnifiedTopology: 'true'
     }, function(error){
