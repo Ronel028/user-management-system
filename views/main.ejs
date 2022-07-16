@@ -18,21 +18,11 @@
             </tr>
             </thead>
             <tbody>
-                <% data.forEach(user=>{ %>
-                <tr>
-                        <td><%= user.name %></td>
-                        <td><%= user.email %></td>
-                        <td><%= user.age %></td>
-                        <td><%= user.email %></td>
-                        <td><%= user.status %></td>
-                        <td class="action">
-                            <a href="/updateuser" class="pencil"><i class="bi bi-pencil-fill"></i></a>
-                            <a href="#" class="delete text-danger"><i class="bi bi-trash-fill"></i></a>
-                        </td>
-                </tr>
-                <%})%>
+                <!-- user data appear here -->
             </tbody>
         </table>
+
+        <script src="/script/viewData.js"></script>
     
 <!-- include footer -->
 <%- include('./partials/footer') %>

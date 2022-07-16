@@ -3,7 +3,22 @@ const express = require('express');
 const router = express.Router();
 
 // import services
+const userData = require('../database/services/viewUser');
 const insertUser = require('../database/services/insertUser');
+const deleteUser = require('../database/services/delete');
+
+// view user data from mongoDB database
+router.get('/viewuserdata', async function(req, res){
+    try {
+        const user = await userData();
+        res.json(user)
+    } catch (error) {
+        res.json({
+            error: error,
+            message: 'Fetching data failed'
+        })
+    }
+})
 
 // insert user data
 router.post('/insertuser', async function(req, res){
@@ -25,6 +40,21 @@ router.post('/insertuser', async function(req, res){
         })
     }
 
+})
+
+// delete user data
+router.delete('/deleteuser', async function(req, res){
+    let { _id } = req.query;
+    try {
+        const userDel = await deleteUser(_id)
+        console.log(userDel)
+        res.json({
+            message: 'User remove success'
+        })
+    } catch (error) {
+        res.json(error)
+        console.log(error)
+    }
 })
 
 module.exports = router;
