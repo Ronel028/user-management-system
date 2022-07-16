@@ -6,12 +6,12 @@ const router = express.Router();
 const userData = require('../database/services/viewUser');
 const insertUser = require('../database/services/insertUser');
 const deleteUser = require('../database/services/delete');
+const updateUser = require('../database/services/updateUser');
 
 // view user data from mongoDB database
 router.get('/viewuserdata', async function(req, res){
     try {
         const user = await userData();
-        console.log(user.length)
         res.json(user) 
         
         
@@ -58,6 +58,23 @@ router.delete('/deleteuser', async function(req, res){
         res.json({
             status: 'Error'
         })
+    }
+})
+
+// update user data
+router.post('/updateuser', async function(req, res){
+    try {
+
+        const id = req.query._id;
+        const { name, email, age, gender, status} = req.body;
+
+        await updateUser(id, name, email, age, gender, status)
+
+        res.json("Update Success")
+        
+    } catch (error) {
+        res.json("Error updating")
+        console.log(error)
     }
 })
 

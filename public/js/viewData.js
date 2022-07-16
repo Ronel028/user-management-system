@@ -27,7 +27,7 @@ function displayUserData(userProfile){
                    <td>${gender}</td>
                    <td>${status}</td>
                    <td class="action">
-                       <a href="/updateuser" class="pencil"><i class="bi bi-pencil-fill"></i></a>
+                       <a href="/updateuser/${name}/${email}/${age}/${gender}/${status}?_id=${_id}" class="pencil"><i class="bi bi-pencil-fill"></i></a>
                        <a onclick="deleteUser('${_id}')" class="delete text-danger"><i class="bi bi-trash-fill"></i></a>
                    </td>
                </tr>
