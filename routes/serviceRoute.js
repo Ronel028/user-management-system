@@ -68,18 +68,23 @@ router.post('/updateuser', async function(req, res){
         const id = req.query._id;
         const { name, email, age, gender, status} = req.body;
 
-        await updateUser(id, name, email, age, gender, status)
-        // console.log(id);
-        // console.log(name);
-        // console.log(email);
-        // console.log(age);
-        // console.log(gender);
-        // console.log(status);
+        if(!name || !email || !age || !gender || !status){
+            res.json({
+                status: 'Empty field'
+            });
+            return;
+        }
+        else{
+            await updateUser(id, name, email, age, gender, status)
+            res.json({
+                status: 'ok'
+            })
+        }
 
-        res.json("Update Success")
-        
     } catch (error) {
-        res.json("Error updating")
+        res.json({
+            status: 'failed update'
+        })
         console.log(error)
     }
 })
