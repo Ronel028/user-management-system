@@ -26,10 +26,7 @@ mongoose.connect(process.env.mongoURI, {
     }, function(error){
         if(error){
             console.log("Error Connecting")
-        }else{
-           console.log('connected to mongoDB Atlas') 
         }
-        
     })
 
 // routes

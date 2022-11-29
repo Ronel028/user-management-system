@@ -37,7 +37,6 @@ router.post('/insertuser', async function(req, res){
         })
         
     } catch (error) {
-        console.log(error)
         res.json({
             message: "Save Failed"
         })
@@ -50,7 +49,6 @@ router.delete('/deleteuser', async function(req, res){
     let { _id } = req.query;
     try {
         const userDel = await deleteUser(_id)
-        console.log(userDel)
         res.json({
             status: 'ok'
         })
@@ -85,7 +83,6 @@ router.post('/updateuser', async function(req, res){
         res.json({
             status: 'failed update'
         })
-        console.log(error)
     }
 })
 
