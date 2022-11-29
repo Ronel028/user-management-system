@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 
 // template engine
 app.set('view engine', 'ejs')
+app.set('views', './views')
 
 // test mongoDB
 const mongoose = require('mongoose');
