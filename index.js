@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
 // template engine
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs')
 
 // test mongoDB
